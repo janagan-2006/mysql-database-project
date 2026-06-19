@@ -1,8 +1,5 @@
 USE college_db;
 
--- ============================================================
--- Task 1: Baseline Performance - No Indexes
--- ============================================================
 
 EXPLAIN FORMAT=JSON
 SELECT s.first_name, s.last_name, c.course_name
@@ -16,9 +13,7 @@ SHOW INDEX FROM enrollments;
 SHOW INDEX FROM courses;
 
 
--- ============================================================
--- Task 2: Add Indexes and Compare Plans
--- ============================================================
+
 
 CREATE INDEX idx_students_enrollment_year
 ON students(enrollment_year);

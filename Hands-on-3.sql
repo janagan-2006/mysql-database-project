@@ -1,8 +1,5 @@
 USE college_db;
 
--- ============================================================
--- Task 1: Subqueries
--- ============================================================
 
 SELECT s.student_id, s.first_name, s.last_name, COUNT(e.enrollment_id) AS enrollment_count
 FROM students s
@@ -47,10 +44,6 @@ FROM (
 JOIN departments d ON dept_avg.department_id = d.department_id
 WHERE dept_avg.avg_salary > 85000;
 
-
--- ============================================================
--- Task 2: Creating and Using Views
--- ============================================================
 
 CREATE OR REPLACE VIEW vw_student_enrollment_summary AS
 SELECT
@@ -133,9 +126,7 @@ WITH CHECK OPTION;
 SELECT * FROM vw_course_stats;
 
 
--- ============================================================
--- Task 3: Stored Procedures and Transactions
--- ============================================================
+
 
 DROP PROCEDURE IF EXISTS sp_enroll_student;
 

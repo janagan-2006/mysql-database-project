@@ -1,8 +1,5 @@
 USE college_db;
 
--- ============================================================
--- Task 1: Insert, Update and Delete Data
--- ============================================================
 
 INSERT INTO departments (dept_name, head_of_dept, budget) VALUES
  ('Computer Science', 'Dr. Ramesh Kumar', 850000.00),
@@ -58,10 +55,6 @@ SELECT COUNT(*) AS total_students FROM students;
 SELECT COUNT(*) AS total_enrollments FROM enrollments;
 
 
--- ============================================================
--- Task 2: Single-Table Queries and Filtering
--- ============================================================
-
 SELECT * FROM students
 WHERE enrollment_year = 2022
 ORDER BY last_name ASC;
@@ -81,9 +74,7 @@ FROM students
 GROUP BY enrollment_year;
 
 
--- ============================================================
--- Task 3: Multi-Table Joins
--- ============================================================
+
 
 SELECT
     CONCAT(s.first_name, ' ', s.last_name) AS full_name,
@@ -119,10 +110,6 @@ SELECT
 FROM departments d
 LEFT JOIN professors p ON d.department_id = p.department_id;
 
-
--- ============================================================
--- Task 4: Aggregations and Grouping
--- ============================================================
 
 SELECT
     c.course_name,
